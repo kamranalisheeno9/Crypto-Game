@@ -2,7 +2,6 @@ import React from "react";
 import Logo from "../assets/logo.png";
 const Navbar = () => {
   const primaryColor = "[#080B10]";
-
   const tertiaryColor = "[#d5a777]";
 
   return (

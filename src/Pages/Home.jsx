@@ -1,19 +1,30 @@
 import React, { useState, useRef } from "react";
-import Navbar from "../components/Navbar";
+// React Icons Import
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsFire, BsFillPersonFill } from "react-icons/bs";
 import { AiFillRocket } from "react-icons/ai";
 import { FaRoad } from "react-icons/fa";
+// Components Import
+
 import Roadmap from "../components/Roadmap";
+import Navbar from "../components/Navbar";
+// Carousel Import
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const Home = () => {
+  // Ref Hook
+
   const callAction = useRef(null);
   const aboutUs = useRef(null);
   const roadMap = useRef(null);
+  // Toggle Nvbar State
 
   const [toggleNav, setToggleNav] = useState(false);
+
+  // Games Data Array
+
   const gamesData = [
     {
       title: "DICE",
@@ -53,6 +64,8 @@ const Home = () => {
     },
   ];
 
+  // About Us Data Array
+
   const aboutInfo = [
     {
       infoTitle: "Information 1",
@@ -70,6 +83,8 @@ const Home = () => {
         "   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquamtotam a pariatur voluptatibus maiores perspiciatis rem velit vitae ex illo eaque maxime veniam iure adipisci, earum ipsa asperiores    deserunt voluptate!m debitis adipisci, et doloremque quod corporis autem vel neque, dolorem minima voluptatibus laborum esse consectetur ",
     },
   ];
+
+  // Carousel Responsiveness
 
   const responsive = {
     desktop: {
@@ -94,8 +109,12 @@ const Home = () => {
     },
   };
 
+  // Custom Li Tailwind CSS
+
   const LiClass =
     "p-4  transition-all duration-500 hover:bg-[#17202e] cursor-pointer border-l-4 border-[#d5a77600] text-[#D5A776] hover:border-[#D5A776]  hover:text-white";
+
+  // Navbar Li Callback Function
 
   const handleClick = (clickedRef) => {
     clickedRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -103,7 +122,10 @@ const Home = () => {
   };
 
   return (
+    // Main Container
     <div className=" select-none relative">
+      {/* Navbar Container */}
+
       <div
         className={`    grid grid-cols-12  md:grid-cols-7 lg:grid-cols-5 xl:grid-cols-6`}
       >
@@ -123,9 +145,12 @@ const Home = () => {
           <Navbar />
         </div>
       </div>
+      {/* Main Navbar And Content Section Container */}
       <div
         className={` grid grid-cols-5 transition duration-500 relative md:grid-cols-7 lg:grid-cols-5 xl:grid-cols-6   `}
       >
+        {/* Custom Navbar */}
+
         <div
           className={`   transition-all duration-400  bg-[#080B10]   ${
             toggleNav
@@ -183,6 +208,8 @@ const Home = () => {
         <div
           className={` section-scrollbar relative top-0 left-0 md:left-[250px]  col-span-5 md:col-span-5 lg:col-span-4 xl:col-span-5 px-5 py-3`}
         >
+          {/* Call To Action Section */}
+
           <section className=" pt-8" ref={callAction}>
             <div className="">
               <div className=" text-4xl  md:text-5xl  font-semibold text-white">
@@ -205,6 +232,7 @@ const Home = () => {
               <span className={` text-[#d5a777]`}> Games</span>
             </div>
 
+            {/* Games Carousel Multi Slider */}
             <Carousel
               swipeable={true}
               draggable={true}
@@ -249,6 +277,8 @@ const Home = () => {
               })}
             </Carousel>
           </section>
+          {/* About Us Section */}
+
           <section ref={aboutUs} className=" text-center mt-16 py-5 ">
             <div className=" text-4xl  md:text-6xl  font-semibold text-white uppercase md:mb-16">
               <span className={` text-[#d5a777] `}> About</span> US
@@ -263,6 +293,9 @@ const Home = () => {
               sint eum debitis adipisci, et doloremque quod corporis autem vel
               neque, dolorem minima voluptatibus laborum esse consectetur.
             </p>
+
+            {/* Custom Info Card */}
+
             <div className="  grid grid-cols-6 my-20 px-4 lg:px-10  ">
               {aboutInfo.map((info, id) => {
                 return (
@@ -287,6 +320,8 @@ const Home = () => {
               })}
             </div>
           </section>
+          {/* Roadmap Section */}
+
           <section ref={roadMap} className=" text-center my-10 pt-6 ">
             <div className=" text-4xl  md:text-6xl mb-10  font-semibold text-white uppercase">
               <span className={` text-[#d5a777] `}> Road</span>map

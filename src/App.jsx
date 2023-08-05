@@ -1,27 +1,35 @@
-import Home from './Pages/Home'
-import './App.css'
-import Logo from './assets/logo.png'
-import { useEffect, useState } from 'react'
+import Home from "./Pages/Home";
+import "./App.css";
+import Logo from "./assets/logo.png";
+import { useEffect, useState } from "react";
 function App() {
- const [loader,setLoader]=useState(false)
- useEffect(()=>{
-  setLoader(true)
-  setTimeout(() => {
-    setLoader(false)
-  }, 2000);
- },[])
+  // Loader State initialization
+
+  const [loader, setLoader] = useState(false);
+
+  // On Render Callback Function For Loader
+
+  useEffect(() => {
+    setLoader(true);
+    setTimeout(() => {
+      setLoader(false);
+    }, 2000);
+  }, []);
   return (
     <>
-    {loader ?
-    <div className='   absolute top-[50%] left-[50%] z-50 transform translate-x-[-50%] translate-y-[-50%]' >
+      {/* Loader Component */}
 
-    <img className='animate-pulse ' src={Logo} width="150px" alt="" />
-    </div>
-    : 
-     <Home />
-    }
+      {loader ? (
+        <div className="   absolute top-[50%] left-[50%] z-50 transform translate-x-[-50%] translate-y-[-50%]">
+          <img className="animate-pulse " src={Logo} width="150px" alt="" />
+        </div>
+      ) : (
+        // Main Home Page
+
+        <Home />
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
