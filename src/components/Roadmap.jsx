@@ -14,12 +14,7 @@ const Roadmap = () => {
       Title: "2022",
       Description:
         "   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquamtotam a pariatur voluptatibus maiores perspiciatis rem velit vitae ex illo eaque maxime veniam iure adipisci, earum ipsa asperiores    deserunt voluptate!m debitis adipisci, et doloremque quod corporis autem vel neque, dolorem minima voluptatibus laborum esse consectetur ",
-    },
-    {
-      Title: "2021",
-      Description:
-        "   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquamtotam a pariatur voluptatibus maiores perspiciatis rem velit vitae ex illo eaque maxime veniam iure adipisci, earum ipsa asperiores    deserunt voluptate!m debitis adipisci, et doloremque quod corporis autem vel neque, dolorem minima voluptatibus laborum esse consectetur ",
-    },
+    }
   ];
   return (
     <div>
