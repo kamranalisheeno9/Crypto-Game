@@ -32,14 +32,14 @@
   .card:nth-child(odd)::before {
     left: 0px;
     top: -4.5px;
-    bottom: -4.75px;
+    bottom: -4.5px;
     border-width: 5px 0 5px 5px;
     border-radius: 50px 0 0 50px;
   }
   
   .card:nth-child(even)::before {
     right: 0;
-    top: 0;
+    top: -.25px;
     bottom: 0;
     border-width: 5px 5px 5px 0;
     border-radius: 0 50px 50px 0;
