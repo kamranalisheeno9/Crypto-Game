@@ -24,7 +24,7 @@
   .card::before {
     content: "";
     position: absolute;
-    width:50%;
+    width:70%;
     border: solid #D5A777;
   }
   
@@ -91,4 +91,11 @@
   
   .card:nth-child(even) > .info > .title::before {
     right: -45px;
+  }
+
+  @media screen and (max-width: 768px) {
+    
+  .card {
+    max-width: 90%;
+  }
   }
