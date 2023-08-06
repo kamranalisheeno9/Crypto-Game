@@ -24,9 +24,9 @@
   .card::before {
     content: "";
     position: absolute;
-    width:80%;
+    width:51%;
+    
     border: solid #D5A777;
-    border-radius: 100%;
   }
   
   .card:nth-child(odd)::before {
